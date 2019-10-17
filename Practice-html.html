@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<title>practice</title>
+	<link rel="stylesheet" type="text/css" href="Practice-css.css">
+</head>
+<body>
+
+	<!-- <div>明日花绮罗</div> -->
+
+	
+	<!-- 五环居中练习 -->
+<!-- 	<div class="five">
+		<div class="circle1"></div>
+		<div class="circle2"></div>
+		<div class="circle3"></div>
+		<div class="circle4"></div>
+		<div class="circle5"></div>
+	</div> -->
+
+	<!-- 导航栏 -->
+<!-- 	<ul class="nav">
+		<li class="list-item"><a href="#">天猫</a></li>
+		<li class="list-item"><a href="#">聚划算</a></li>
+		<li class="list-item"><a href="#">天猫超市</a></li>
+	</ul> -->
+
+
+	<!-- 三角形 -->
+	<!-- <div class="sanjiaoxing"></div> -->
+
+<!-- 	<div class="father">
+		<div class="son"></div>
+	</div>
+ -->
+
+
+	<script type = "text/javascript">
+
+		// var a = [1, 2, 3];
+
+		// function test() {
+		// 	var arr = [];
+
+		// 	for(i = 0; i < 10; i++){
+
+		// 	// 运用立即实行函数
+
+		// 		(function (j) {
+		// 			arr[j] = function () {
+		// 				console.log(j);
+		// 			}
+		// 		}(i));
+
+		// 	}
+		// 	return arr;
+		// }
+
+		// myArr = test();
+		// for(j = 0; j < 10; j++){
+		// 	myArr[j]();
+		// }
+
+
+// ----------------------------------------------------------
+
+		// a = 100;
+		// function demo(e) {
+
+		// 	function e() {}
+		// 	arguments[0] = 2;
+		// 	document.write(e + " ");
+
+		// 	if(a) {
+		// 		var b = 123;
+		// 		function c() {}
+		// 	}
+
+		// 	var c;
+		// 	a = 10;
+		// 	var a;
+		// 	document.write(b + " ");
+		// 	f = 123;
+		// 	document.write(c + " ");
+		// 	document.write(a + " ");
+		// }
+
+		// var a;
+		// demo(1);
+		// document.write(a + " ");
+		// document.write(f + " ");
+/*
+
+首先AO是这样的
+A0{
+	e : undefined;
+	b : undefined;
+	c : undefined;
+	a : undefined;
+}
+
+然后
+AO{
+	e : function e() {};
+	b : undefined; (因为a的值此时还是undefined，不执行a中的内容，所以b的值为undefined)
+	c : function c() {}; (当if中能够定义函数时c是function () {}，此时实际上c是undefined)
+	a : undefined;
+}
+
+因为arguments[0] = 2，且arguments[0]与e相映射，arguments[0]变则e变，e变则arguments[0]变
+所以e的值变成了2
+AO{
+	e : 2;
+	b : undefined; (因为a的值此时还是undefined，不执行a中的内容，所以b的值为undefined)
+	c : function c() {}; (当if中能够定义函数时c是function () {}，此时实际上c是undefined)
+	a : 10;
+}
+
+因为f未被定义，所以去全局变量GO中寻找
+GO{
+	a = 100; (这个a是全局变量，和上面的a不一样)
+	f = 123;
+
+}
+
+上面的代码的执行结果：2 undefined undefined 10 100 123
+
+*/
+
+// ----------------------------------------------------------
+
+
+// 求一个字符串的字节长度(题目见html-cssCode文件)
+
+// 第一种方法：遍历字符串，遇到汉字就加二，遇到普通字符就加一
+		// function retByteslen(target) {
+		// 	var count = 0;
+		// 	for(var i = 0; i < target.length; i++){
+		// 		if(target.charCodeAt(i) <= 255){
+		// 			count++;
+		// 		}
+		// 		else if(target.charCodeAt(i) > 255){
+		// 		count += 2;
+		// 		}
+		// 	}
+		// 	console.log(count);
+		// }
+
+
+// 第二种方法：让count等于字符串的长度，因为汉字比普通字符多一位，所以有一个汉字就加一，有几个就加几
+		// function retByteslen(target) {
+		// 	var count = len = target.length;
+		// 	for(var i = 0; i < len; i++){
+		// 		if(target.charCodeAt(i) > 255){
+		// 			count++;
+		// 		}
+		// 	}
+		// 	console.log(count);
+		// }
+
+		// retByteslen("Hello World!");// 12
+		// retByteslen("你好 世界！");// 11
+
+// ----------------------------------------------------------
+
+		// var f = (
+		// 	function f(){
+		// 		return "1";
+		// 	},
+		// 	function g(){
+		// 		return 2;
+		// 	}
+		// )();
+
+		// // 以上代码可以看成是 var f = 2;
+
+		// console.log(typeof(f));// number
+
+// ----------------------------------------------------------
+
+		var x = 1;
+		if(function f() {}){
+			x += typeof(f);   // typeof(f) = undefined
+		}
+		console.log(x); // 1undefined
+		console.log(typeof(x)); //string
+
+
+
+
+		
+	</script>
+
+</body>
+</html>

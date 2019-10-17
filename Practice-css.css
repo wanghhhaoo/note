@@ -1,0 +1,149 @@
+/*
+div{
+	font-size: 20px;
+	font-family: arial;
+	border: 1px solid black;
+	height: 200px;
+	text-align: center;
+	line-height: 200px;	纵向居中方法
+
+}
+*/
+
+
+
+/*五环居中练习*/
+/*
+
+*{
+	padding: 0;
+	margin: 0;
+}
+
+.five{
+	position: absolute;
+	width: 380px;
+	height: 170px;
+	left: 50%;
+	top: 50%;
+	margin-top: -90px;
+	margin-left: -190px;
+}
+
+
+并列选择器
+
+.circle1,
+.circle2,
+.circle3,
+.circle4,
+.circle5{
+	position: absolute;
+	width: 100px;
+	height: 100px;
+	border: 10px solid yellow;
+	border-radius: 50%;
+}
+
+
+
+.circle1{
+	border-color: yellow;
+	left: 130px;
+	top: 0;
+}
+
+.circle2{
+	border-color: green;
+	left: 260px;
+	top: 0;
+}
+
+.circle3{
+	border-color: blue;
+	left: 65px;
+	top: 50px;
+	z-index: 1;
+}
+
+.circle4{
+	border-color: black;
+	left: 195px;
+	top: 50px;
+	z-index: 1;
+}
+
+.circle5{
+	border-color: red;
+	left: 0;
+	top: 0;
+}
+*/
+
+
+/*导航栏*/
+/*
+*{
+	padding:0;
+	margin:0;
+	color: #424242;
+	font-family: arial;
+}
+
+.nav .list-item a{
+	text-decoration:none;
+	color: #f40;
+	font-weight: bold;
+	padding: 5px 5px;
+	border-radius: 15px;
+}
+
+.nav .list-item a:hover{
+	background-color: #f40;
+	color: #fff;
+}
+
+.nav{
+	list-style: none;
+}
+
+.nav .list-item{
+	float: left;
+	margin: 0 10px;
+	height: 40px;
+	line-height: 40px;
+}
+
+.nav::after{
+	content: "";
+	clear: both;
+	display: inline-block;
+}
+*/
+
+
+/*三角形*/
+/*.sanjiaoxing{
+	height: 0px;
+	width: 0px;
+	border: 100px solid black;
+	border-left: 100px solid transparent;
+	border-bottom: 100px solid transparent;
+}*/
+
+
+.father{
+	position: relative;
+	width: 100px;
+	height: 100px;
+	background-color: #f40;
+}
+
+.son{
+	position: absolute;
+	width: 50px;
+	height: 50px;
+	background-color: #3c3c3c;
+	margin: auto;
+	top:0;left:0;right:0;bottom:0
+}
